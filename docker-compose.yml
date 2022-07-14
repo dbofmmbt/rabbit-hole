@@ -1,0 +1,10 @@
+services:
+  rabbit:
+    image: rabbitmq
+    volumes:
+      - rabbit-data:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+    
+volumes:
+  rabbit-data: {}
