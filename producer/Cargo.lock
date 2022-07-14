@@ -289,18 +289,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "consumer"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "futures-lite",
- "lapin",
- "tokio",
- "tracing",
- "tracing-subscriber",
-]
-
-[[package]]
 name = "cookie-factory"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"

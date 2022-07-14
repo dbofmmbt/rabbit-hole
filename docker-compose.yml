@@ -5,6 +5,23 @@ services:
       - rabbit-data:/var/lib/rabbitmq
     ports:
       - 5672:5672
+
+  producer:
+    build:
+      context: ./producer
+    environment:
+      - RABBIT_HOST=rabbit
+    depends_on:
+      - rabbit
+
+  consumer:
+    build:
+      context: ./consumer
+    environment:
+      - RABBIT_HOST=rabbit
+    depends_on:
+      - rabbit
+      - producer
     
 volumes:
   rabbit-data: {}
